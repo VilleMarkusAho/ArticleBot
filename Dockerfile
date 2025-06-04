@@ -1,7 +1,7 @@
 # ----------------------------
 # Stage 1 - React Dev Frontend
 # ----------------------------
-FROM node:22.14.0-slim as frontend
+FROM node:22.14.0-slim AS frontend
 
 WORKDIR /app/frontend
 COPY UI/package*.json ./
@@ -12,7 +12,7 @@ CMD ["npm", "start"]
 # ----------------------------
 # Stage 2 - Flask Backend with venv
 # ----------------------------
-FROM python:3.13.3-slim as backend
+FROM python:3.13.3-slim AS backend
 
 WORKDIR /app/backend
     
